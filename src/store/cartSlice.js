@@ -10,9 +10,9 @@ const cartSlice = createSlice({
   initialState: initState,
   reducers: {
     addToCart: (state, action) => {
-      console.log(state, action.payload);
+   
       const newItem = action.payload;
-      console.log(newItem.id, { action });
+  
       const existingItem = state.items.find((item) => item.id === newItem.id);
       state.itemQuantity++;
       if (existingItem) {
@@ -29,7 +29,7 @@ const cartSlice = createSlice({
       }
     },
     removeToCart: (state, action) => {
-      console.log(state, action.payload);
+     
       const newItem = action.payload;
       const existingItem = state.items.find((item) => item.id === newItem.id);
       state.itemQuantity--;
